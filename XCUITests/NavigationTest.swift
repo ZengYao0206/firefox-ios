@@ -152,12 +152,10 @@ class NavigationTest: BaseTestCase {
     }
 
     private func clearData() {
-        navigator.goto(SettingsScreen)
-        navigator.nowAt("\(SettingsScreen)-middle")
         navigator.goto(ClearPrivateDataSettings)
         app.tables.staticTexts["Clear Private Data"].tap()
         app.alerts.buttons["OK"].tap()
-        navigator.goto(HomePanel_TopSites)
+        navigator.goto(NewTabScreen)
     }
 
     func testToggleBetweenMobileAndDesktopSiteFromSite() {
